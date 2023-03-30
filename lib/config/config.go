@@ -7,7 +7,7 @@ import (
 )
 
 type Config struct {
-	TestLevel string `mapstructure:"TEST_LEVEL"`
+	LogLevel string `mapstructure:"LOG_LEVEL"`
 }
 
 func Load() (config Config, err error) {

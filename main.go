@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/cyberstz/notatka/lib/config"
+	logger "github.com/cyberstz/notatka/lib/logger"
 )
 
 func main() {
@@ -13,5 +14,7 @@ func main() {
 		log.Fatalf("Could not load config. %v", err)
 	}
 
-	log.Fatalf("Config. %v", config)
+	l := logger.New(config.LogLevel)
+
+	l.Info().Msg("Test zerologger info message.")
 }
